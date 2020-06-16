@@ -1,1 +1,16 @@
 <h1>Hello</h1>
+
+<form method="post" action="/users" accept-charset="UTF-8">
+
+<label for="username"> Username</label>
+<input type="text" id="username" placeholder="username" name="user[username]"  required></input>
+<label for="email"> Email</label>
+<input type="email" id="email" placeholder="email" name="user[email]"  required></input>
+<label for="password"> Password</label>
+<input type="password" id="password" placeholder="password" name="user[password]"  required></input>
+<label for="confirmpassword"> Confirm Password</label>
+<input type="password" id="confirmpassword" placeholder="confirm password" name="confirmpassword"  required></input>
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<input type="submit" id="register" value="Submit"></input>
+
+</form>
