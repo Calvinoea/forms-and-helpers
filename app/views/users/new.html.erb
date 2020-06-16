@@ -1,29 +1,43 @@
-<%= form_with(url: "/users", method: "post") do %>
-  <%= label_tag(:username, "Username") %>
-  <%= text_field(:user, :username, placeholder: "Enter your username") %> <br><br>
-  <%= label_tag(:email, "Email") %>
-  <%= email_field(:user, :email, placeholder: "Enter your email here") %><br><br>
-  <%= label_tag(:password, "Password") %>
-  <%= password_field(:user, :password, placeholder: "Type your password") %><br><br>
-  <%= label_tag(:password, "Confirmation password") %>
-  <%= password_field(:user, :password, placeholder: "Re-enter your password") %>
-  <%= submit_tag("Submit") %>
+
+<%= form_for @user, url: { action: "new" } do |f| %>
+  <%= f.label :username, 'Username' %>
+  <%= f.text_field :username, placeholder: "username" %>
+  <%= f.label :email %>
+  <%= f.email_field :email, placeholder: "email" %>
+  <%= f.label :password %>
+  <%= f.password_field :password, placeholder: "password" %>
+  <%= f.submit %>
 <% end %>
 
-<%# <h1>Hello</h1> %>
-<%# 
-<form method="post" action="/users" accept-charset="UTF-8">
 
-<label for="username"> Username</label>
-<input type="text" id="username" placeholder="username" name="user[username]"  required>
-<label for="email"> Email</label>
-<input type="email" id="email" placeholder="email" name="user[email]"  required>
-<label for="password"> Password</label>
-<input type="password" id="password" placeholder="password" name="user[password]"  required>
-<label for="confirmpassword"> Confirm Password</label>
-<input type="password" id="confirmpassword" placeholder="confirm password" name="confirmpassword"  required>
-<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %> 
-<%# "> %>
-<%# <input type="submit" id="register" value="Submit"> %>
 
-<%# </form> %>
+# <%= form_with(url: "/users", method: "post") do %>
+#   <%= label_tag(:username, "Username") %>
+#   <%= text_field(:user, :username, placeholder: "Enter your username") %> <br><br>
+#   <%= label_tag(:email, "Email") %>
+#   <%= email_field(:user, :email, placeholder: "Enter your email here") %><br><br>
+#   <%= label_tag(:password, "Password") %>
+#   <%= password_field(:user, :password, placeholder: "Type your password") %><br><br>
+#   <%= label_tag(:password, "Confirmation password") %>
+#   <%= password_field(:user, :password, placeholder: "Re-enter your password") %>
+#   <%= submit_tag("Submit") %>
+# <% end %>
+
+# <%# <h1>Hello</h1> %>
+# <%#
+# <form method="post" action="/users" accept-charset="UTF-8">
+
+# <label for="username"> Username</label>
+# <input type="text" id="username" placeholder="username" name="user[username]"  required>
+# <label for="email"> Email</label>
+# <input type="email" id="email" placeholder="email" name="user[email]"  required>
+# <label for="password"> Password</label>
+# <input type="password" id="password" placeholder="password" name="user[password]"  required>
+# <label for="confirmpassword"> Confirm Password</label>
+# <input type="password" id="confirmpassword" placeholder="confirm password" name="confirmpassword"  required>
+# <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>
+# <%# "> %>
+# <%# <input type="submit" id="register" value="Submit"> %>
+
+# <%# </form> %>
+
