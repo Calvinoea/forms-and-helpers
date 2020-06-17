@@ -1,0 +1,24 @@
+
+<%= form_for @user do |f| %>
+  <% if user.errors.any? %>
+  <div id="error_explanation">
+  <h2> <%= pluralize(user.errors.count, "error") %>
+  user prohibited from making edit:</h2>
+<% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+            </ul>
+        </div>
+  <% end %>
+
+  <%= f.label :username, 'Username' %>
+  <%= f.text_field :username, placeholder: "username" %>
+  <%= f.label :email %>
+  <%= f.email_field :email, placeholder: "email" %>
+  <%= f.label :password %>
+  <%= f.password_field :password, placeholder: "password" %>
+  <%= f.submit("Update")%>
+<% end %>
+
+
+
