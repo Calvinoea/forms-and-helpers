@@ -37,7 +37,7 @@ You may use the following steps to get a local copy:
 ## 🤝 Contributing
 You are welcome to make contributions to the repository. Contributions may be made through issues comments and feature requests.
 
-## 👤 Author
+## 👤 Authors
 
 # Sayyod Saidov
 
@@ -54,6 +54,3 @@ You are welcome to make contributions to the repository. Contributions may be ma
 
 ## Show your support
 Give a ⭐️ if you like this project!
-
-## 📝 License
-This project is MiT licensed.
